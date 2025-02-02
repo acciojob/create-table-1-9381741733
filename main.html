@@ -1,64 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table Row Insertion</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-  table {
-    width: 50%;
-    border-collapse: collapse;
-    margin: 10px 0;
-  }
-
-  td {
-    padding: 8px;
-    text-align: center;
-    border: 1px solid black;
-  }
-
-  button {
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-  }
-  </style>
+	<meta charset=utf-8 /> 
+	<title>Insert row in a table</title> 
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <table id="sampleTable" border="1">
-    <tr>
-      <td>Row1 cell1</td>
-      <td>Row1 cell2</td>
-    </tr>
-    <tr>
-      <td>Row2 cell1</td>
-      <td>Row2 cell2</td>
-    </tr>
-  </table>
-  <br>
-  <button onclick="insert_Row()">Insert row</button>
+	<table id="sampleTable" border="1"> 
+		<tr><td>Row1 cell1</td> 
+		<td>Row1 cell2</td></tr> 
+		<tr><td>Row2 cell1</td> 
+		<td>Row2 cell2</td></tr> 
+	</table><br> 
+	
+	<input type="button" onclick="insert_Row()" value="Insert row">  
+    <script type="text/javascript" src="./script.js">
+</script>
 
-  <script>
-  function insert_Row() {
-    // Get the table by its ID
-    const table = document.getElementById("sampleTable");
-
-    // Insert a new row at the second position (index 1)
-    const newRow = table.insertRow(1);
-
-    // Insert two new cells in the new row
-    const cell1 = newRow.insertCell(0);
-    const cell2 = newRow.insertCell(1);
-
-    // Set the cell values
-    cell1.textContent = "New Cell1";
-    cell2.textContent = "New Cell2";
-  }
-  </script>
 </body>
+
 </html>
